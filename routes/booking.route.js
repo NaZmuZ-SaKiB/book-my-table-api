@@ -14,7 +14,7 @@ const router = express.Router();
 router.get("/", (req, res) =>
   res.send(
     `<img src="${
-      process.env.PORT || "http://localhost:5050/"
+      process.env.API_BASE_URL || "http://localhost:5050/"
     }assets/server-running.jpeg" /><h1>Booking রাউট ঠিক আছে।</h1>`
   )
 );

@@ -23,7 +23,7 @@ const cuisineRoutes = require("./routes/cuisine.route");
 app.get("/", (req, res) => {
   return res.send(
     `<img src="${
-      process.env.PORT || "http://localhost:5050/"
+      process.env.API_BASE_URL || "http://localhost:5050/"
     }assets/server-running.jpeg" /><h1>সার্ভার ঠিক আছে।</h1>`
   );
 });

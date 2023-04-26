@@ -1,6 +1,6 @@
 ## Book My Table API
 
-This is an api for a restaurant booking website.
+This is an api for a restaurant booking website. The server is currently slow because it is hosted on render.com free tier. So it takes some time to wake up.
 [Visit Website](https://book-my-table-react.netlify.app)
 
 # Functionalities

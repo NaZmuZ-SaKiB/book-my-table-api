@@ -66,7 +66,6 @@ exports.signin = async (req, res, next) => {
       .cookie("jwt", token, {
         secure: true,
         httpOnly: true,
-        sameSite: "lax",
       })
       .json({
         status: "success",
@@ -103,7 +102,6 @@ exports.signup = async (req, res, next) => {
       .cookie("jwt", token, {
         secure: true,
         httpOnly: true,
-        sameSite: "lax",
       })
       .json({
         status: "success",
@@ -125,7 +123,6 @@ exports.signout = async (req, res, next) => {
       .cookie("jwt", "none", {
         expires: new Date(Date.now() + 10 * 1000),
         httpOnly: true,
-        sameSite: "none",
         secure: true,
       })
       .json({
@@ -161,7 +158,6 @@ exports.updateUser = async (req, res, next) => {
       .cookie("jwt", token, {
         secure: true,
         httpOnly: true,
-        sameSite: "lax",
       })
       .json({
         status: "success",

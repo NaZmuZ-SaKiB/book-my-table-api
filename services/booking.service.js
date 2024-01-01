@@ -1,17 +1,10 @@
-const { PrismaClient, Prisma } = require("@prisma/client");
+const { PrismaClient } = require("@prisma/client");
 
 const prisma = new PrismaClient();
 
 exports.findMyBookingsService = async (id) => {
   const bookings = await prisma.booking.findMany({
-    where: {
-      booker_id: id,
-      booking_time: {
-        [Prisma.DateTime]: {
-          gt: new Date(),
-        },
-      },
-    },
+    where: { booker_id: id },
     include: {
       restaurant: true,
     },
